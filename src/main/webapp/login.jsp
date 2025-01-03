@@ -38,6 +38,14 @@
     .btn-primary:hover {
       background-color: #d84315;
     }
+
+    .alert {
+      display: none;
+    }
+
+    .alert-show {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -57,6 +65,16 @@
   <div class="row justify-content-center">
     <div class="col-md-6 col-lg-4">
       <form action="loginServlet" method="post" class="mt-4 p-4 bg-white shadow rounded">
+        <!-- Hiển thị thông báo lỗi nếu có -->
+        <%
+          String error = request.getParameter("error");
+          if (error != null && error.equals("true")) {
+        %>
+        <div class="alert alert-danger alert-show" role="alert">
+          Tài khoản hoặc mật khẩu không đúng. Vui lòng thử lại.
+        </div>
+        <% } %>
+
         <div class="mb-3">
           <label for="email" class="form-label">Email:</label>
           <input type="email" class="form-control" id="email" name="email" required>
