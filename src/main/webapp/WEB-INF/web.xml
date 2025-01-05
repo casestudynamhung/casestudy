@@ -4,7 +4,7 @@
          version="5.0">
     <servlet>
         <servlet-name>loginServlet</servlet-name>
-        <servlet-class>Servlet.LoginServlet</servlet-class>
+        <servlet-class>Servlet.AdminLoginServlet.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
@@ -12,7 +12,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>registerServlet</servlet-name>
-        <servlet-class>Servlet.RegisterServlet</servlet-class>
+        <servlet-class>Servlet.AdminLoginServlet.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>registerServlet</servlet-name>

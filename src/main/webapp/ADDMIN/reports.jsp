@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container py-5">
-    <h1 class="text-center">Báo cáo</h1>
+    <h1 class="text-center">Báo cáo</h1
     <p>Dữ liệu báo cáo sẽ hiển thị tại đây.</p>
 </div>
 </body>

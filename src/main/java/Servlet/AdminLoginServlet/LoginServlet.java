@@ -1,4 +1,4 @@
-package Servlet;
+package Servlet.AdminLoginServlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
