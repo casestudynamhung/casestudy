@@ -1,25 +1,29 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
+    <title>Phụ Kiện - NamHung</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cửa Hàng Phụ Kiện MacBook</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f4f4f4;
+            background-color: #fff8e1;
         }
 
         header {
-            background-color: #333;
+            background: linear-gradient(to right, #ff5722, #ffc107);
             color: white;
-            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo {
             font-size: 2rem;
-            text-align: center;
             font-weight: bold;
+            text-align: center;
+            margin: 0 auto;
         }
 
         .nav-link {
@@ -27,124 +31,110 @@
         }
 
         .nav-link:hover {
-            color: #ff5722 !important;
+            color: #ffe082 !important;
         }
 
-        .product-card {
+        .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .product-card:hover {
+        .card:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .cart-btn {
-            background-color: #ff5722;
-            color: white;
-            border: none;
-            width: 100%;
-        }
-
-        .cart-btn:hover {
-            background-color: #e64a19;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         footer {
-            background-color: #333;
+            background: #e64a19;
             color: white;
-            padding: 20px 0;
-            text-align: center;
         }
 
-        .product-title {
-            font-size: 2rem;
+        footer p {
+            margin: 0;
+        }
+
+        .btn-dark {
+            background-color: #ff5722;
+            border: none;
+        }
+
+        .btn-dark:hover {
+            background-color: #d84315;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
             color: #ff5722;
-            margin-bottom: 2rem;
             text-align: center;
+            margin: 2rem 0;
         }
     </style>
 </head>
 <body>
-<header>
-    <div class="container">
-        <div class="logo">Cửa Hàng Phụ Kiện MacBook</div>
+<header class="py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.jsp" class="logo text-decoration-none text-white">NamHùng</a>
         <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a href="index.html" class="nav-link">Trang Chủ</a></li>
-                <li class="nav-item"><a href="cart.html" class="nav-link">Giỏ Hàng</a></li>
+            <ul class="nav">
+                <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng Nhập</a></li>
+                <li class="nav-item"><a href="register.jsp" class="nav-link">Đăng Ký</a></li>
+                <li class="nav-item"><a href="shoppingcart.jsp" class="nav-link">Giỏ Hàng</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<section class="container py-5">
-    <h2 class="product-title">Phụ Kiện MacBook</h2>
-    <div class="row g-4">
-        <!-- Phụ kiện chuột Bluetooth -->
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300x300?text=Chuột+Bluetooth" class="card-img-top" alt="Chuột Bluetooth">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Chuột Bluetooth</h5>
-                    <p class="card-text text-danger fw-bold">$49</p>
-                    <button class="btn cart-btn" onclick="addToCart('Chuột Bluetooth', 49)">Thêm vào giỏ hàng</button>
+<section class="py-5">
+    <div class="container">
+        <h1 class="title">Danh Sách Phụ Kiện</h1>
+        <div class="row justify-content-center g-4">
+            <div class="col-md-3">
+                <div class="card border-0 shadow">
+                    <img src="Img/Airpods-Max.jpeg" class="card-img-top" alt="AirPods Max">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">AirPods Max</h5>
+                        <p class="card-text text-danger fw-bold">$699</p>
+                        <button class="btn btn-dark w-100">Mua Ngay</button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Phụ kiện bàn phím MacBook -->
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300x300?text=Bàn+Phím+MacBook" class="card-img-top" alt="Bàn Phím MacBook">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Bàn Phím MacBook</h5>
-                    <p class="card-text text-danger fw-bold">$129</p>
-                    <button class="btn cart-btn" onclick="addToCart('Bàn Phím MacBook', 129)">Thêm vào giỏ hàng</button>
+            <div class="col-md-3">
+                <div class="card border-0 shadow">
+                    <img src="Img/cap-usb-c.jpeg" class="card-img-top" alt="Cáp sạc Apple USB-C 1M">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Cáp sạc Apple USB-C 1M</h5>
+                        <p class="card-text text-danger fw-bold">$99</p>
+                        <button class="btn btn-dark w-100">Mua Ngay</button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Phụ kiện túi xách MacBook -->
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300x300?text=Túi+Xách+MacBook" class="card-img-top" alt="Túi Xách MacBook">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Túi Xách MacBook</h5>
-                    <p class="card-text text-danger fw-bold">$79</p>
-                    <button class="btn cart-btn" onclick="addToCart('Túi Xách MacBook', 79)">Thêm vào giỏ hàng</button>
+            <div class="col-md-3">
+                <div class="card border-0 shadow">
+                    <img src="Img/Pencil-2.png" class="card-img-top" alt="Apple Pencil 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Apple Pencil 2</h5>
+                        <p class="card-text text-danger fw-bold">$199</p>
+                        <button class="btn btn-dark w-100">Mua Ngay</button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Phụ kiện cáp sạc MacBook -->
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300x300?text=Cáp+Sạc+MacBook" class="card-img-top" alt="Cáp Sạc MacBook">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Cáp Sạc MacBook</h5>
-                    <p class="card-text text-danger fw-bold">$29</p>
-                    <button class="btn cart-btn" onclick="addToCart('Cáp Sạc MacBook', 29)">Thêm vào giỏ hàng</button>
+            <div class="col-md-3">
+                <div class="card border-0 shadow">
+                    <img src="Img/MagicMouse2.jpeg" class="card-img-top" alt="Magic Mouse 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Magic Mouse 2</h5>
+                        <p class="card-text text-danger fw-bold">$129</p>
+                        <button class="btn btn-dark w-100">Mua Ngay</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<footer>
-    <p>&copy; 2025 Cửa Hàng Phụ Kiện MacBook. All rights reserved.</p>
+<footer class="py-3 text-center">
+    <p>&copy; 2025 NamHung. All rights reserved.</p>
 </footer>
-
-<script>
-    let cart = [];
-
-    // Hàm thêm phụ kiện vào giỏ hàng
-    function addToCart(productName, price) {
-        cart.push({ product: productName, price: price });
-        alert(productName + ' đã được thêm vào giỏ hàng!');
-        console.log(cart); // In giỏ hàng ra console cho kiểm tra
-    }
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

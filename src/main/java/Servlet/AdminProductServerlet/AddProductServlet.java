@@ -9,53 +9,42 @@ import model.Product;
 import service.ProductService;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 @WebServlet("/AddProductServlet")
 public class AddProductServlet extends HttpServlet {
-
-    private ProductService productService;
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        productService = new ProductService();
-    }
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/QuanLyBanHangCongNghe";
+    private static final String DB_USER = "root";
+    private static final String DB_PASSWORD = "your_password";
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("productName");
+        String priceParam = request.getParameter("productPrice");
+        String description = request.getParameter("productDescription");
+        String productType = request.getParameter("productType");
+        String imageURL = request.getParameter("productImage");
+        String stockQuantityParam = request.getParameter("stockQuantity");
+
         try {
-            // Lấy dữ liệu từ form
-            String name = request.getParameter("productName");
-            String priceParam = request.getParameter("productPrice");
-            String description = request.getParameter("productDescription");
+            double price = Double.parseDouble(priceParam);
+            int stockQuantity = Integer.parseInt(stockQuantityParam);
 
-            // Kiểm tra dữ liệu đầu vào
-            if (name == null || name.isEmpty() || description == null || description.isEmpty()) {
-                response.sendRedirect("addProductForm.jsp?error=emptyFields");
-                return;
+            try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
+                String sql = "INSERT INTO Product (ProductName, ProductType, Price, StockQuantity, ImageURL, Description) VALUES (?, ?, ?, ?, ?, ?)";
+                PreparedStatement stmt = conn.prepareStatement(sql);
+                stmt.setString(1, name);
+                stmt.setString(2, productType);
+                stmt.setDouble(3, price);
+                stmt.setInt(4, stockQuantity);
+                stmt.setString(5, imageURL);
+                stmt.setString(6, description);
+
+                stmt.executeUpdate();
+                response.sendRedirect("manageProducts.jsp?success=add");
             }
-
-            double price;
-            try {
-                price = Double.parseDouble(priceParam);
-                if (price < 0) {
-                    response.sendRedirect("addProductForm.jsp?error=invalidPrice");
-                    return;
-                }
-            } catch (NumberFormatException e) {
-                response.sendRedirect("addProductForm.jsp?error=invalidPrice");
-                return;
-            }
-
-            // Tạo đối tượng sản phẩm mới
-            Product newProduct = new Product(0, name, price, description);
-
-            // Thêm sản phẩm
-            productService.addProduct(newProduct);
-
-            // Chuyển hướng sau khi thêm thành công
-            response.sendRedirect("manageProducts.jsp?success=add");
-
         } catch (Exception e) {
             response.sendRedirect("addProductForm.jsp?error=true");
         }

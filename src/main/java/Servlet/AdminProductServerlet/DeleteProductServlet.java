@@ -8,42 +8,35 @@ import jakarta.servlet.http.HttpServletResponse;
 import service.ProductService;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 @WebServlet("/DeleteProductServlet")
 public class DeleteProductServlet extends HttpServlet {
-
-    private ProductService productService;
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        productService = new ProductService();
-    }
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/QuanLyBanHangCongNghe";
+    private static final String DB_USER = "root";
+    private static final String DB_PASSWORD = "your_password";
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            // Lấy ID sản phẩm từ tham số URL
-            String productIdParam = request.getParameter("id");
-            if (productIdParam == null || productIdParam.isEmpty()) {
-                response.sendRedirect("manageProducts.jsp?error=missingId");
-                return;
-            }
+        String productIdParam = request.getParameter("id");
 
+        try {
             int productId = Integer.parseInt(productIdParam);
 
-            // Xóa sản phẩm
-            boolean deleted = productService.deleteProduct(productId);
+            try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
+                String sql = "DELETE FROM Product WHERE ProductID = ?";
+                PreparedStatement stmt = conn.prepareStatement(sql);
+                stmt.setInt(1, productId);
 
-            // Kiểm tra kết quả xóa
-            if (deleted) {
-                response.sendRedirect("manageProducts.jsp?success=delete");
-            } else {
-                response.sendRedirect("manageProducts.jsp?error=notFound");
+                int rowsAffected = stmt.executeUpdate();
+                if (rowsAffected > 0) {
+                    response.sendRedirect("manageProducts.jsp?success=delete");
+                } else {
+                    response.sendRedirect("manageProducts.jsp?error=notFound");
+                }
             }
-
-        } catch (NumberFormatException e) {
-            response.sendRedirect("manageProducts.jsp?error=invalidId");
         } catch (Exception e) {
             response.sendRedirect("manageProducts.jsp?error=true");
         }

@@ -146,129 +146,144 @@
         <div class="row justify-content-center g-4">
             <div class="col-md-3">
                 <div class="card border-0 shadow">
-                    <img src="Img/Iphone16prm.png" class="card-img-top" alt="iPhone 16 Pro Max">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">IPhone 16 Pro Max</h5>
-                        <p class="card-text text-danger fw-bold">$999</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
-                    </div>
+                    <a href="iphone16prm.jsp">
+                        <img src="Img/Iphone16prm.png" class="card-img-top" alt="iPhone 16 Pro Max">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">IPhone 16 Pro Max</h5>
+                            <p class="card-text text-danger fw-bold">$999</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <img src="Img/Iphone16.png" class="card-img-top" alt="iPhone 16">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">iPhone 16</h5>
-                        <p class="card-text text-danger fw-bold">$799</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <img src="Img/Iphone13.png" class="card-img-top" alt="iPhone 13">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">iPhone 13</h5>
-                        <p class="card-text text-danger fw-bold">$699</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <img src="Img/Iphone16pro.png" class="card-img-top" alt="iPhone 16 Pro">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">iPhone 16 Pro</h5>
-                        <p class="card-text text-danger fw-bold">$899</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <h2 class="section-title">Mac</h2>
-        <div class="row justify-content-center g-4">
             <div class="col-md-3">
                 <div class="card border-0 shadow">
-                    <img src="Img/Macbook-airm1.jpeg" class="card-img-top" alt="MacBook Air M1(2020)">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">MacBook Air M1(2020)</h5>
-                        <p class="card-text text-danger fw-bold">$999</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
-                    </div>
+                    <a href="iphone16.jsp">
+                        <img src="Img/Iphone16.png" class="card-img-top" alt="iPhone 16">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">iPhone 16</h5>
+                            <p class="card-text text-danger fw-bold">$799</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <img src="Img/iMac-m1.webp" class="card-img-top" alt="iMac M1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">iMac M1(2021) 24inch</h5>
-                        <p class="card-text text-danger fw-bold">$1599</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <img src="Img/MacBook-Pro-14inch-M4.jpeg" class="card-img-top" alt="MacBook Pro 14 inch M4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">MacBook Pro 14 inch M4</h5>
-                        <p class="card-text text-danger fw-bold">$1499</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <img src="Img/Mac-mini-M4.jpeg" class="card-img-top" alt="Mac mini M4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Mac mini M4</h5>
-                        <p class="card-text text-danger fw-bold">$999</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <h2 class="section-title">Phụ Kiện</h2>
-        <div class="row justify-content-center g-4">
             <div class="col-md-3">
                 <div class="card border-0 shadow">
-                    <img src="Img/Airpods-Max.jpeg" class="card-img-top" alt="AirPods Pro">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">AirPods Max</h5>
-                        <p class="card-text text-danger fw-bold">$699</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
+                    <a href="iphone13.jsp">
+                        <img src="Img/Iphone13.png" class="card-img-top" alt="iPhone 13">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">iPhone 13</h5>
+                            <p class="card-text text-danger fw-bold">$699</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card border-0 shadow">
+                    <a href="iphone16pro.jsp">
+                        <img src="Img/Iphone16pro.png" class="card-img-top" alt="iPhone 16 Pro">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">iPhone 16 Pro</h5>
+                            <p class="card-text text-danger fw-bold">$899</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <h2 class="section-title">Mac</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-3">
+                    <div class="card border-0 shadow">
+                        <a href="macbook-Air-m1.jsp">
+                            <img src="Img/Macbook-airm1.jpeg" class="card-img-top" alt="MacBook Air M1(2020)">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">MacBook Air M1(2020)</h5>
+                                <p class="card-text text-danger fw-bold">$999</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow">
+                        <a href="imac-m1.jsp">
+                            <img src="Img/iMac-m1.webp" class="card-img-top" alt="iMac M1">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">iMac M1(2021) 24inch</h5>
+                                <p class="card-text text-danger fw-bold">$1599</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow">
+                        <a href="macbook-pro-14inch-m4.jsp">
+                            <img src="Img/MacBook-Pro-14inch-M4.jpeg" class="card-img-top" alt="MacBook Pro 14 inch M4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">MacBook Pro 14 inch M4</h5>
+                                <p class="card-text text-danger fw-bold">$1499</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow">
+                        <a href="macmini-m4.jsp">
+                            <img src="Img/Mac-mini-M4.jpeg" class="card-img-top" alt="Mac mini M4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Mac mini M4</h5>
+                                <p class="card-text text-danger fw-bold">$999</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <img src="Img/cap-usb-c.jpeg" class="card-img-top" alt="Cáp sạc Apple USB-C 1M">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Cáp sạc Apple USB-C 1M</h5>
-                        <p class="card-text text-danger fw-bold">$99</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
+
+            <h2 class="section-title">Phụ Kiện</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-3">
+                    <div class="card border-0 shadow">
+                        <a href="airpods-max.jsp">
+                            <img src="Img/Airpods-Max.jpeg" class="card-img-top" alt="AirPods Pro">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">AirPods Max</h5>
+                                <p class="card-text text-danger fw-bold">$699</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <img src="Img/Pencil-2.png" class="card-img-top" alt="Apple Pencil 2">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Apple Pencil 2</h5>
-                        <p class="card-text text-danger fw-bold">$199</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow">
+                        <a href="cap-sac-usb-c.jsp">
+                            <img src="Img/cap-usb-c.jpeg" class="card-img-top" alt="Cáp sạc Apple USB-C 1M">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Cáp sạc Apple USB-C 1M</h5>
+                                <p class="card-text text-danger fw-bold">$99</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0 shadow">
-                    <img src="Img/MagicMouse2.jpeg" class="card-img-top" alt="Magic Mouse 2">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Magic Mouse 2</h5>
-                        <p class="card-text text-danger fw-bold">$129</p>
-                        <button class="btn btn-dark w-100">Mua Ngay</button>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow">
+                        <a href="apple-pencil2.jsp">
+                            <img src="Img/Pencil-2.png" class="card-img-top" alt="Apple Pencil 2">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Apple Pencil 2</h5>
+                                <p class="card-text text-danger fw-bold">$199</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow">
+                        <a href="magicMouse2.jsp">
+                            <img src="Img/MagicMouse2.jpeg" class="card-img-top" alt="Magic Mouse 2">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Magic Mouse 2</h5>
+                                <p class="card-text text-danger fw-bold">$129</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
