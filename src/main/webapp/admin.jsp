@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background-color: #fff8e1; /* Màu nền giống trang chính */
+            background-color: #fff8e1;
         }
 
         header {
-            background: linear-gradient(to right, #ff5722, #ffc107); /* Màu nền giống trang chính */
+            background: linear-gradient(to right, #ff5722, #ffc107);
             color: white;
         }
 
@@ -52,7 +52,7 @@
         }
 
         footer {
-            background: #e64a19; /* Màu nền chân trang giống trang chính */
+            background: #e64a19;
             color: white;
         }
 
