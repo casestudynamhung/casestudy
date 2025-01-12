@@ -5,3 +5,78 @@
 3. Load config gradlew
 ```
 
+USE quanlybanhangcongnghe;
+
+USE quanlybanhangcongnghe;
+
+-- Bảng Sản phẩm
+CREATE TABLE Product (
+ProductID INT AUTO_INCREMENT PRIMARY KEY,
+ProductName VARCHAR(255) NOT NULL,
+ProductType VARCHAR(100),
+Price DECIMAL(10, 2) NOT NULL,
+StockQuantity INT NOT NULL,
+ImageURL VARCHAR(255),
+Description TEXT
+);
+
+-- Bảng Khách hàng
+CREATE TABLE Customer (
+CustomerID INT AUTO_INCREMENT PRIMARY KEY,
+Name VARCHAR(255) NOT NULL,
+Phone VARCHAR(20),
+Email VARCHAR(100) UNIQUE,
+Address TEXT,
+Gender VARCHAR(10),
+Password VARCHAR(255) NOT NULL
+);
+
+-- Bảng Giỏ hàng
+CREATE TABLE Cart (
+CartID INT AUTO_INCREMENT PRIMARY KEY,
+CustomerID INT NOT NULL,
+CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+UpdatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+);
+
+-- Bảng Chi tiết Giỏ hàng
+CREATE TABLE CartItem (
+CartItemID INT AUTO_INCREMENT PRIMARY KEY,
+CartID INT NOT NULL,
+ProductID INT NOT NULL,
+Quantity INT NOT NULL DEFAULT 1,
+Price DECIMAL(10, 2),
+FOREIGN KEY (CartID) REFERENCES Cart(CartID),
+FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
+
+-- Bảng Đơn hàng
+CREATE TABLE Orders (
+OrderID INT AUTO_INCREMENT PRIMARY KEY,
+CustomerID INT NOT NULL,
+OrderDate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+TotalAmount DECIMAL(15, 2),
+OrderStatus VARCHAR(50),
+FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+);
+
+-- Bảng Chi tiết Đơn hàng
+CREATE TABLE OrderDetail (
+OrderDetailID INT AUTO_INCREMENT PRIMARY KEY,
+OrderID INT NOT NULL,
+ProductID INT NOT NULL,
+Quantity INT NOT NULL,
+Price DECIMAL(10, 2) NOT NULL,
+FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
+
+-- Bảng Quản trị viên
+CREATE TABLE Admin (
+AdminID INT AUTO_INCREMENT PRIMARY KEY,
+Username VARCHAR(100) NOT NULL UNIQUE,
+Password VARCHAR(255) NOT NULL,
+Email VARCHAR(100) UNIQUE
+);
+
